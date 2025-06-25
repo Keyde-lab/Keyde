@@ -1,6 +1,4 @@
 # Jogo NIM com IA Minimax usando Árvore de Decisão
-# Versão super comentada para facilitar o entendimento!
-
 # ---------- Estrutura de Dados para o Ranking ----------
 ranking = []
 

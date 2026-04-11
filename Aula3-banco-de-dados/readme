@@ -1,0 +1,125 @@
+# 📚 Aula 3 - Banco de Dados (Transações e ACID)
+
+## 🧾 Descrição
+
+Este projeto tem como objetivo aplicar conceitos de banco de dados utilizando MySQL e Python, com foco em **consultas** e **transações**, especialmente o uso de **commit** e **rollback**.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+* MySQL
+* DBeaver
+* Python
+* VSCode
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+Aula3-banco-de-dados/
+│
+├── programa.py
+├── transacao.py
+├── README.md
+└── prints/
+    ├── commit.png
+    ├── rollback.png
+```
+
+---
+
+## ⚙️ Funcionalidades implementadas
+
+### ✅ Listagem de alunos
+
+Exibe todos os alunos cadastrados na tabela.
+
+---
+
+### ✅ Listagem de disciplinas
+
+Exibe as disciplinas presentes nas matrículas.
+
+---
+
+### ✅ Matrículas por semestre
+
+Permite visualizar as matrículas de um semestre específico.
+
+---
+
+### ✅ Matrículas de um aluno
+
+Consulta todas as disciplinas associadas a um aluno.
+
+---
+
+### 🔁 Cancelamento de matrícula (Transação)
+
+A operação realiza:
+
+1. Verificação da existência da matrícula
+2. Remoção da matrícula
+3. Execução de **COMMIT** (caso sucesso)
+4. Execução de **ROLLBACK** (caso erro)
+
+---
+
+## 💥 Teste de erro
+
+Foi realizado um teste proposital utilizando uma matrícula inexistente.
+
+Resultado:
+
+* A operação falha
+* O sistema executa **ROLLBACK**
+* Nenhuma alteração é aplicada no banco
+
+---
+
+## 🧠 Propriedades ACID
+
+### 🔹 Atomicidade
+
+A transação é totalmente executada ou completamente desfeita em caso de erro.
+
+---
+
+### 🔹 Consistência
+
+O sistema garante que apenas dados válidos sejam mantidos no banco.
+
+---
+
+### 🔹 Durabilidade
+
+Após o commit, os dados permanecem armazenados permanentemente.
+
+---
+
+### 🔹 Isolamento
+
+Evita conflitos entre múltiplas transações simultâneas em sistemas com vários usuários.
+
+---
+
+## 📸 Evidências
+
+Os prints da execução estão disponíveis na pasta **/prints**, incluindo:
+
+* Execução com commit
+* Execução com rollback
+
+---
+
+## 👩‍💻 Autora
+
+Keyde Taisa da Silva
+
+---
+
+## 📌 Observação
+
+As tabelas e dados foram criados diretamente no MySQL através do DBeaver.

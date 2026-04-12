@@ -1,4 +1,4 @@
-# 🎓 Banco de Dados II – Atividade Prática
+Banco de Dados II – Atividade Prática
 
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 ![Status](https://img.shields.io/badge/status-concluído-brightgreen)
@@ -6,20 +6,20 @@
 
 ---
 
-## 📌 Sobre o Projeto
+Sobre o Projeto
 
 Este repositório apresenta a implementação prática dos conceitos de:
 
-* 🔄 Controle de Concorrência
-* 🔐 Segurança em Banco de Dados
-* 📊 Integridade de Dados
-* 💾 Recuperação (Backup e Restore)
+* Controle de Concorrência
+* Segurança em Banco de Dados
+* Integridade de Dados
+* Recuperação (Backup e Restore)
 
 A atividade simula um **sistema acadêmico**, com gerenciamento de alunos, disciplinas e matrículas.
 
 ---
 
-## 🗂️ Estrutura do Banco
+## Estrutura do Banco
 
 O banco de dados utilizado foi:
 
@@ -28,7 +28,7 @@ CREATE DATABASE IF NOT EXISTS universidade;
 USE universidade;
 ```
 
-### 📊 Tabelas criadas
+### Tabelas criadas
 
 * `alunos`
 * `disciplinas`
@@ -36,9 +36,9 @@ USE universidade;
 
 ---
 
-## 🧱 Modelagem das Tabelas
+## Modelagem das Tabelas
 
-### 👨‍🎓 alunos
+### alunos
 
 ```sql id="10d62i"
 CREATE TABLE alunos (
@@ -51,7 +51,7 @@ CREATE TABLE alunos (
 
 ---
 
-### 📘 disciplinas
+### disciplinas
 
 ```sql id="9t0m5a"
 CREATE TABLE disciplinas (
@@ -64,7 +64,7 @@ CREATE TABLE disciplinas (
 
 ---
 
-### 📝 matriculas
+### matriculas
 
 ```sql id="szwy7h"
 CREATE TABLE matriculas (
@@ -81,7 +81,7 @@ CREATE TABLE matriculas (
 
 ---
 
-## 📥 Inserção de Dados
+## Inserção de Dados
 
 ```sql id="pcl00o"
 INSERT INTO alunos VALUES 
@@ -94,7 +94,7 @@ INSERT INTO disciplinas VALUES
 
 ---
 
-## 🔄 Controle de Concorrência
+## Controle de Concorrência
 
 Implementação utilizando transações e bloqueio de registros:
 
@@ -115,13 +115,13 @@ WHERE cod = 'BD';
 COMMIT;
 ```
 
-### ✔️ Objetivo:
+### Objetivo:
 
 Evitar que dois alunos ocupem a mesma vaga simultaneamente.
-
+Os prints do teste estão anexados.
 ---
 
-## 🔐 Segurança
+## Segurança
 
 Criação de usuários com permissões diferentes:
 
@@ -142,25 +142,25 @@ FLUSH PRIVILEGES;
 
 ---
 
-## 📊 Integridade de Dados
+## Integridade de Dados
 
 Foram aplicadas:
 
-* 🔑 **Integridade de Entidade** → PRIMARY KEY
-* 🔗 **Integridade Referencial** → FOREIGN KEY
-* 📏 **Integridade de Domínio** → CHECK (vagas ≥ 0)
+* **Integridade de Entidade** → PRIMARY KEY
+* **Integridade Referencial** → FOREIGN KEY
+* **Integridade de Domínio** → CHECK (vagas ≥ 0)
 
 ---
 
-## 💾 Backup e Recuperação
+## Backup e Recuperação
 
-### 📤 Backup
+### Backup
 
 ```bash id="c7ap46"
 mysqldump -u root -p universidade > backup.sql
 ```
 
-### 📥 Restauração
+### Restauração
 
 ```bash id="o32j92"
 mysql -u root -p universidade < backup.sql
@@ -174,11 +174,11 @@ mysql -u root -p universidade < backup.sql
 * ❌ Chave primária duplicada
 * ❌ Comando `mysql` não reconhecido
 
-✔️ Todos foram resolvidos durante o desenvolvimento.
+✔️ Todos foram resolvidos durante o desenvolvimento. A criação da chave primária foi a parte que tive mais problemas, já que tive que refazer os passos diversas vezes, inclusive reiniciando os procedimentos para tentar resolver as duplicações de tabelas e outros problemas que iam se acumulando por executar algum passo errado. 
 
 ---
 
-## ✅ Conclusão
+## Conclusão
 
 A atividade permitiu aplicar conceitos essenciais de banco de dados, garantindo:
 
@@ -186,12 +186,3 @@ A atividade permitiu aplicar conceitos essenciais de banco de dados, garantindo:
 * Controle de acesso
 * Prevenção de erros de concorrência
 * Segurança e recuperação
-
----
-
-## 👨‍🏫 Referência
-
-Material da disciplina **Banco de Dados II**
-Controle de Concorrência, Segurança, Integridade e Recuperação de Dados
-
----
